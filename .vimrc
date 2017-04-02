@@ -10,6 +10,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'	" подсказка функций из библиоек
+Plugin 'scrooloose/nerdtree' " дерево файлов
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -30,11 +31,22 @@ syntax on
 "нумерация строк
 set number
 "
+" --- блок настройки отступов ---
+"
 "Заменяет инкапсуляцую на пробелы
 set expandtab
 "
 "Число пробелов
 set tabstop=4
+"
+"Число пробелов команды << and >>
+set shiftwidth=4
+set smarttab
+"
+"автоматически выставляет отступы
+set smartindent
+"
+"--- конец блока настройки отступов --- 
 "
 "переход по виртуальным строкам
 nmap j gj
@@ -59,7 +71,7 @@ let mapleader="," "Клавища лидер
 " неотображаемые символы
 nmap <leader>l :set list!<CR> 
 "
-map <C-n> : NERDTreeToggle<CR>
+map <leader>n : NERDTreeToggle<CR>
 "
 " вклейка
 set pastetoggle=<F2>
