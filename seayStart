@@ -1,0 +1,6 @@
+#!/bin/bash
+#/usr/bin/sway-gb-ck
+export XKB_DEFAULT_LAYOUT=us,de
+export XKB_DEFAULT_VARIANT=,nodeadkeys
+export XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle,
+sway
